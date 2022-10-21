@@ -1,4 +1,4 @@
-import pandas
+import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
@@ -57,5 +57,7 @@ def plot_pie_compare(ax, df:pd.DataFrame, column:str, group='full data', labels=
     ax.pie(val, labels= lab, autopct='%1.1f%%', textprops= {'fontsize': 14})
     ax.set_title(f'{group}: Pie Chart of {column}', size=20, fontweight='bold')
         
-    
-pd.options.display.float_format = format_float
+
+# def format_float(value):
+#    return f'{value:,.2f}'    
+# pd.options.display.float_format = format_float

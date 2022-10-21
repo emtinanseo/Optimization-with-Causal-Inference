@@ -59,5 +59,3 @@ def fix_outlier(df, column):
     
     return df[column]
 
-def format_float(value):
-    return f'{value:,.2f}'
