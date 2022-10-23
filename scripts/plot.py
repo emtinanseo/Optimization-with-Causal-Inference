@@ -41,12 +41,18 @@ def plot_pie(df:pd.DataFrame, column:str, labels= None, file_name= None)->None:
     plt.show()
 
     
-def plot_count_compare(ax, df:pd.DataFrame, column:str, hue= None, order=None, group='full data'):
+def plot_count_compare(ax, df:pd.DataFrame, column:str, hue= None, order=None):
     sns.countplot(ax= ax, data=df, x=column, order= order, hue= hue)
     if hue:
-        ax.set_title(f'{group}: Distribution of {column} for different {hue}s')
+        ax.set_title(f'Distribution of {column} for different {hue}s')
     else:
-        ax.set_title(f'{group}: Distribution of {column}')
+        ax.set_title(f'Distribution of {column}')
+
+
+def plot_hist_compare(ax, df:pd.DataFrame, column:str, color:str):
+    sns.distplot(ax= ax, data=df, x=column, color = color, kde= True)
+    ax.set_title(f'Distribution of {column}')
+
     
     
 def plot_pie_compare(ax, df:pd.DataFrame, column:str, group='full data', labels=None)->None:
