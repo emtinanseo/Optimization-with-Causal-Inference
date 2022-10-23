@@ -49,9 +49,10 @@ def plot_count_compare(ax, df:pd.DataFrame, column:str, hue= None, order=None):
         ax.set_title(f'Distribution of {column}')
 
 
-def plot_hist_compare(ax, df:pd.DataFrame, column:str, color:str):
-    sns.distplot(ax= ax, data=df, x=column, color = color, kde= True)
-    ax.set_title(f'Distribution of {column}')
+# def plot_hist_compare(ax, df:pd.DataFrame, column:str, color:str):
+#     sns.histplot(ax= ax, data=df, x=column,color=color, kde= True)
+#     #sns.displot(ax= ax, data=df, x=column, color = color, kde= True)
+#     ax.set_title(f'Distribution of {column}')
 
     
     
