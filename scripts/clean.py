@@ -15,7 +15,7 @@ class clean:
         indx = indx_lat | indx_long
 
         print("There are {} coordinate values out of bounds, accounting to {:.2f}% of records.".format(sum(indx), 
-        sum(indx)/len(df)))
+        sum(indx)/len(df)*100))
 
         if drop:
             df.drop(df[indx].index, inplace=True)
