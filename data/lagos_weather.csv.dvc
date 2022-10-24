@@ -1,0 +1,4 @@
+outs:
+- md5: e661377b88a5ec25124c5766089b7e0b
+  size: 4089
+  path: lagos_weather.csv
