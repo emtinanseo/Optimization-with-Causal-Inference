@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 
 
@@ -20,3 +21,8 @@ class clean:
             df.drop(df[indx].index, inplace=True)
 
         return df
+
+    def drop_outlier(self, df: pd.DataFrame, column:str, alpha= 0.05):
+        indx = df[df[column] > df[column].quantile(1-alpha)].index
+
+        return df.drop(indx, axis=0)
