@@ -6,3 +6,7 @@
 /clean_merged.csv
 /lagos_weather.csv
 /new_features.csv
+/complete_orders.csv
+/missing_orders.csv
+/clean_driver_locations.csv
+/incomplete_merged.csv
